@@ -15,6 +15,10 @@ class ChannelVC: UIViewController {
         SetupSWReveal()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func SetupSWReveal() {
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.size.width - 100
     }

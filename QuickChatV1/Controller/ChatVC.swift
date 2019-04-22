@@ -20,6 +20,10 @@ class ChatVC: UIViewController {
         
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     func SetupSWReveal() {
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: UIControl.Event.touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController()!.panGestureRecognizer())
